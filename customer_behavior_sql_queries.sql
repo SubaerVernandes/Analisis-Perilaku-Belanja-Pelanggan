@@ -2,7 +2,7 @@
 select gender, SUM(purchase_amount) as revenue
 from customer
 group by gender
-
+-- 
 
 -- Q2. Pelanggan mana yang menggunakan diskon tetapi tetap berbelanja lebih dari rata-rata jumlah pembelian?
 select customer_id, purchase_amount 
