@@ -1,262 +1,295 @@
-# Customer Shopping Behavior Analysis
+# 🛍️ Analisis Perilaku Belanja Pelanggan
 
-## 📌 Project Overview
+## 📌 Gambaran Umum Proyek
 
-This project analyzes customer shopping behavior to identify purchasing patterns, customer segments, and key factors that influence sales and customer engagement.
+Proyek ini menganalisis perilaku belanja pelanggan untuk mengidentifikasi pola pembelian, segmen pelanggan, performa produk, serta faktor-faktor yang memengaruhi penjualan dan keterlibatan pelanggan.
 
-The analysis uses **Python, SQL, and Power BI** to transform raw customer transaction data into actionable business insights.
+Analisis ini menggunakan **Python, SQL, dan Power BI** untuk mengubah data transaksi pelanggan mentah menjadi insight bisnis yang bermakna dan dapat ditindaklanjuti.
 
-The project follows an end-to-end data analytics workflow:
+Proyek ini mengikuti alur kerja analisis data secara menyeluruh:
 
-**Data Collection → Data Cleaning → Exploratory Data Analysis → SQL Analysis → Data Visualization → Business Insights**
-
----
-
-## 🎯 Business Problem
-
-A retail company wants to better understand its customers' shopping behavior in order to:
-
-* Improve sales performance
-* Understand customer purchasing patterns
-* Identify valuable customer segments
-* Analyze customer preferences
-* Improve customer engagement and retention
-* Support data-driven business decisions
-
-The main business question is:
-
-> **How can customer shopping behavior data be used to improve sales performance, customer segmentation, and customer engagement?**
+**Pengumpulan Data → Pembersihan Data → Exploratory Data Analysis → Analisis SQL → Visualisasi Data → Business Insights → Rekomendasi**
 
 ---
 
-## 🎯 Project Objectives
+## 🎯 Permasalahan Bisnis
 
-The objectives of this analysis are to:
+Sebuah perusahaan retail ingin memahami perilaku belanja pelanggannya dengan lebih baik untuk meningkatkan performa penjualan, keterlibatan pelanggan, dan retensi pelanggan.
 
-1. Analyze overall customer purchasing behavior.
-2. Identify high-value customer segments.
-3. Analyze purchasing patterns across customer demographics.
-4. Identify popular products and categories.
-5. Analyze the impact of discounts and promotions.
-6. Analyze customer purchase frequency and spending.
-7. Develop an interactive Power BI dashboard.
-8. Generate actionable business recommendations.
+Analisis ini berfokus pada beberapa area bisnis utama:
+
+* Meningkatkan performa penjualan
+* Memahami pola pembelian pelanggan
+* Mengidentifikasi segmen pelanggan bernilai tinggi
+* Memahami preferensi pelanggan
+* Mengevaluasi dampak diskon dan promosi
+* Meningkatkan keterlibatan dan retensi pelanggan
+* Mendukung pengambilan keputusan berbasis data
+
+### Pertanyaan Bisnis Utama
+
+> **Bagaimana data perilaku belanja pelanggan dapat digunakan untuk meningkatkan performa penjualan, segmentasi pelanggan, dan keterlibatan pelanggan?**
+
+---
+
+## 🎯 Tujuan Proyek
+
+Tujuan dari proyek ini adalah untuk:
+
+1. Menganalisis keseluruhan perilaku pembelian pelanggan.
+2. Mengidentifikasi segmen pelanggan bernilai tinggi.
+3. Menganalisis pola pembelian berdasarkan demografi pelanggan.
+4. Mengidentifikasi produk dan kategori produk yang populer.
+5. Menganalisis dampak diskon dan promosi.
+6. Menganalisis frekuensi pembelian dan perilaku pengeluaran pelanggan.
+7. Mengembangkan dashboard Power BI yang interaktif.
+8. Menghasilkan rekomendasi bisnis yang dapat ditindaklanjuti berdasarkan insight berbasis data.
 
 ---
 
 ## 📊 Dataset
 
-The dataset contains customer shopping transaction information.
+Dataset berisi informasi transaksi dan perilaku belanja pelanggan.
 
-Key variables include:
+### Variabel Utama
 
-* Customer ID
-* Age
-* Gender
-* Location
-* Subscription Status
-* Purchase Amount
-* Previous Purchases
-* Frequency of Purchases
-* Discount Applied
-* Promo Code Used
-* Category
-* Item Purchased
-* Size
-* Color
-* Season
-* Review Rating
-* Shipping Type
-* Payment Method
+* ID Pelanggan
+* Usia
+* Jenis Kelamin
+* Lokasi
+* Status Langganan
+* Jumlah Pembelian
+* Pembelian Sebelumnya
+* Frekuensi Pembelian
+* Diskon yang Diterapkan
+* Kode Promo yang Digunakan
+* Kategori
+* Produk yang Dibeli
+* Ukuran
+* Warna
+* Musim
+* Rating/Ulasan
+* Jenis Pengiriman
+* Metode Pembayaran
 
-The dataset is used to analyze customer demographics, purchasing behavior, product performance, and customer engagement.
+Dataset ini digunakan untuk menganalisis **demografi pelanggan, perilaku pembelian, performa produk, keterlibatan pelanggan, perilaku langganan, dan penggunaan diskon**.
 
 ---
 
-## 🛠️ Tools & Technologies
+## 🛠️ Tools & Teknologi
 
-### Python
+### 🐍 Python
 
-Used for:
+Python digunakan untuk:
 
-* Data loading
-* Data cleaning
-* Data preprocessing
+* Memuat data
+* Membersihkan data
+* Melakukan preprocessing data
 * Exploratory Data Analysis (EDA)
-* Data transformation
+* Melakukan transformasi data
 
-Libraries:
+**Library yang digunakan:**
 
 * Pandas
 * NumPy
 * Matplotlib
 * Seaborn
 
-### SQL
+### 🗄️ SQL
 
-Used for:
+SQL digunakan untuk melakukan analisis berbasis kebutuhan bisnis, meliputi:
 
-* Data aggregation
-* Customer analysis
-* Product analysis
-* Customer segmentation
-* Business question analysis
+* Agregasi data
+* Analisis pelanggan
+* Analisis produk
+* Segmentasi pelanggan
+* Analisis diskon
+* Analisis langganan
+* Menjawab pertanyaan bisnis utama
 
-### Power BI
+### 📊 Power BI
 
-Used for:
+Power BI digunakan untuk:
 
-* Data visualization
-* KPI development
-* Interactive dashboard
-* Business reporting
-* Business insights
+* Visualisasi data
+* Pengembangan KPI
+* Pengembangan dashboard interaktif
+* Pelaporan bisnis
+* Menghasilkan business insights
 
 ---
 
-# 🔄 Project Workflow
+# 🔄 Alur Kerja Proyek
 
-## 1. Data Cleaning
+## 1. Pembersihan Data
 
-The raw dataset was processed to improve data quality and make it suitable for analysis.
+Dataset mentah diproses untuk meningkatkan kualitas data dan mempersiapkan data agar dapat digunakan untuk analisis lebih lanjut.
 
-The data cleaning process included:
+Proses pembersihan data meliputi:
 
-* Checking missing values
-* Checking duplicate records
-* Handling inconsistent data
-* Standardizing categorical variables
-* Transforming data types
-* Creating analytical columns
-* Preparing the final dataset for SQL and Power BI
+* Memeriksa missing values
+* Memeriksa data duplikat
+* Menangani data yang tidak konsisten
+* Menstandarkan variabel kategorikal
+* Mengubah tipe data
+* Membuat kolom analisis
+* Mempersiapkan dataset akhir untuk analisis SQL dan visualisasi Power BI
 
 ---
 
 ## 2. Exploratory Data Analysis
 
-Exploratory Data Analysis was performed to understand the characteristics of the dataset.
+Exploratory Data Analysis (EDA) dilakukan untuk memahami karakteristik dan distribusi dataset.
 
-The analysis focused on:
+Analisis berfokus pada:
 
-* Customer demographics
-* Purchase behavior
-* Product categories
-* Purchase frequency
-* Customer spending
-* Discounts and promotions
-* Subscription status
-* Customer ratings
+* Demografi pelanggan
+* Perilaku pembelian
+* Kategori produk
+* Frekuensi pembelian
+* Pengeluaran pelanggan
+* Penggunaan diskon dan promosi
+* Status langganan
+* Rating pelanggan
 
-EDA helped identify important patterns before performing deeper SQL analysis and dashboard development.
-
----
-
-# 🧮 SQL Analysis
-
-SQL was used to answer key business questions related to customer shopping behavior.
-
-Examples of analytical questions include:
-
-### Customer Analysis
-
-* Which customer segments generate the highest revenue?
-* How does spending differ by gender?
-* How does customer age relate to purchasing behavior?
-* Do subscribed customers generate higher revenue?
-
-### Product Analysis
-
-* Which products generate the highest sales?
-* Which product categories are most popular?
-* Which products have the highest average ratings?
-
-### Purchasing Behavior
-
-* How frequently do customers make purchases?
-* What is the average purchase amount?
-* How do discounts affect purchasing behavior?
-* Which payment methods are most frequently used?
+EDA membantu mengidentifikasi pola dan hubungan penting sebelum melakukan analisis SQL yang lebih mendalam dan mengembangkan dashboard Power BI.
 
 ---
 
-# 📊 Power BI Dashboard
+# 🧮 Analisis SQL
 
-An interactive Power BI dashboard was developed to provide a comprehensive overview of customer shopping behavior.
+SQL digunakan untuk menjawab pertanyaan bisnis utama yang berkaitan dengan perilaku belanja pelanggan.
 
-The dashboard includes key metrics and visualizations related to:
+Analisis mencakup **performa pelanggan, performa produk, perilaku pembelian, diskon, segmentasi pelanggan, dan perilaku langganan**.
 
-* Total Customers
-* Total Sales
-* Average Purchase Amount
-* Customer Segmentation
-* Product Performance
-* Customer Demographics
-* Purchase Frequency
-* Discount Usage
-* Subscription Status
-* Product Categories
+### Analisis Pelanggan
+
+* Berapa total revenue yang dihasilkan oleh pelanggan laki-laki dan perempuan?
+* Pelanggan mana yang menggunakan diskon tetapi tetap melakukan pembelian di atas rata-rata jumlah pembelian?
+* Apakah pelanggan yang berlangganan memiliki pengeluaran lebih tinggi dibandingkan pelanggan yang tidak berlangganan?
+* Apakah pelanggan yang melakukan pembelian berulang lebih cenderung untuk berlangganan?
+
+### Analisis Produk
+
+* Produk mana yang memiliki rata-rata rating ulasan tertinggi?
+* Produk mana yang memiliki persentase pembelian dengan diskon tertinggi?
+* Apa 3 produk yang paling banyak dibeli dalam setiap kategori?
+
+### Analisis Perilaku Pembelian
+
+* Bagaimana perbedaan rata-rata jumlah pembelian antara pengiriman Standard dan Express?
+* Bagaimana pelanggan dapat disegmentasikan berdasarkan jumlah pembelian sebelumnya?
+* Berapa kontribusi revenue dari setiap kelompok usia?
+
+---
+
+# 📊 Dashboard Power BI
+
+Dashboard Power BI interaktif dikembangkan untuk memberikan gambaran menyeluruh mengenai perilaku belanja pelanggan.
+
+Dashboard mencakup metrik utama dan visualisasi yang berkaitan dengan:
+
+* Total Pelanggan
+* Total Penjualan
+* Rata-rata Jumlah Pembelian
+* Segmentasi Pelanggan
+* Performa Produk
+* Demografi Pelanggan
+* Frekuensi Pembelian
+* Penggunaan Diskon
+* Status Langganan
+* Kategori Produk
 
 ## Dashboard Preview
 
-![Customer Shopping Behavior Dashboard](dashboard.png)
-
-
+[Customer Shopping Behavior Dashboard](https://chatgpt.com/c/dashboard.png)
 
 ---
 
 # 💡 Business Insights
 
-The analysis provides several insights into customer shopping behavior.
+Analisis menghasilkan beberapa insight mengenai perilaku belanja pelanggan.
 
-### 1. Customer Segmentation
+### 1. Segmentasi Pelanggan
 
-Customer purchasing behavior varies across different customer segments. Identifying high-value customers can help the company prioritize retention and personalized marketing strategies.
+Perilaku pembelian pelanggan berbeda pada setiap segmen.
 
-### 2. Product Performance
+Mengidentifikasi pelanggan berdasarkan riwayat dan frekuensi pembelian dapat membantu perusahaan memahami tingkat keterlibatan pelanggan dan mengembangkan strategi retensi yang lebih tepat sasaran.
 
-Some products and categories contribute more significantly to overall sales. These products can be prioritized in marketing campaigns and inventory planning.
+### 2. Performa Produk
 
-### 3. Subscription Behavior
+Beberapa produk dan kategori memberikan kontribusi yang lebih besar terhadap penjualan dan permintaan pelanggan secara keseluruhan.
 
-Subscription status can be used as an important customer segmentation variable to understand differences in purchasing frequency and spending behavior.
+Produk dengan performa tinggi dapat diprioritaskan dalam kampanye pemasaran dan perencanaan persediaan.
 
-### 4. Discount & Promotion
+### 3. Perilaku Langganan
 
-Discounts and promotional campaigns can influence purchasing decisions. However, their effectiveness should be evaluated based on incremental sales and customer value rather than discount usage alone.
+Status langganan merupakan salah satu dimensi penting dalam menganalisis perilaku pelanggan.
 
-### 5. Customer Engagement
+Membandingkan pelanggan yang berlangganan dan tidak berlangganan dapat membantu perusahaan memahami perbedaan dalam frekuensi pembelian, rata-rata pengeluaran, dan kontribusi revenue secara keseluruhan.
 
-Purchase frequency and previous purchase behavior can be used to identify highly engaged customers and customers who may require retention strategies.
+### 4. Diskon & Promosi
 
----
+Diskon dan kampanye promosi dapat memengaruhi keputusan pembelian pelanggan.
 
-# 🚀 Business Recommendations
+Namun, efektivitas diskon tidak sebaiknya hanya dinilai berdasarkan penggunaan diskon. Perusahaan juga perlu mempertimbangkan dampaknya terhadap penjualan, frekuensi pembelian, dan nilai pelanggan.
 
-Based on the analysis, several recommendations can be proposed:
+### 5. Keterlibatan Pelanggan
 
-### 1. Focus on High-Value Customers
+Riwayat pembelian sebelumnya dan frekuensi pembelian dapat digunakan untuk mengidentifikasi tingkat keterlibatan pelanggan yang berbeda.
 
-Develop personalized offers and loyalty programs for customers with high purchase frequency and high spending.
+Pelanggan dengan tingkat keterlibatan tinggi dapat ditargetkan melalui program loyalitas, sementara pelanggan dengan tingkat keterlibatan lebih rendah dapat diberikan strategi retensi yang lebih spesifik.
 
-### 2. Improve Customer Retention
+### 6. Demografi Pelanggan
 
-Use previous purchase behavior to identify customers with declining activity and target them with personalized campaigns.
+Analisis demografi pelanggan seperti usia dan jenis kelamin memberikan insight tambahan mengenai perilaku pembelian dan kontribusi revenue.
 
-### 3. Optimize Promotional Strategies
-
-Evaluate discount campaigns based on their impact on sales, purchase frequency, and customer lifetime value.
-
-### 4. Prioritize High-Performing Products
-
-Increase marketing exposure and inventory availability for products and categories with strong sales performance.
-
-### 5. Strengthen Customer Segmentation
-
-Use demographic and behavioral variables to create more targeted marketing campaigns.
+Insight tersebut dapat digunakan untuk mendukung strategi pemasaran dan segmentasi pelanggan yang lebih tepat sasaran.
 
 ---
 
-# 📁 Project Structure
+# 🚀 Rekomendasi Bisnis
+
+Berdasarkan hasil analisis, beberapa rekomendasi bisnis yang dapat diberikan adalah:
+
+### 1. Fokus pada Pelanggan Bernilai Tinggi
+
+Mengembangkan penawaran yang dipersonalisasi dan program loyalitas untuk pelanggan dengan frekuensi pembelian dan tingkat pengeluaran yang tinggi.
+
+Hal ini dapat membantu memperkuat hubungan dengan pelanggan dan mendorong pembelian berulang.
+
+### 2. Meningkatkan Retensi Pelanggan
+
+Menggunakan riwayat pembelian dan segmentasi pelanggan untuk mengidentifikasi pelanggan yang mengalami penurunan tingkat keterlibatan.
+
+Pelanggan tersebut dapat ditargetkan melalui promosi yang dipersonalisasi, rekomendasi produk, dan kampanye retensi.
+
+### 3. Mengoptimalkan Strategi Promosi
+
+Mengevaluasi kampanye diskon berdasarkan dampaknya terhadap:
+
+* Penjualan
+* Frekuensi pembelian
+* Pengeluaran pelanggan
+* Customer Lifetime Value
+
+Hal ini dapat membantu memastikan bahwa pemberian diskon menghasilkan nilai bisnis tambahan, bukan hanya mengurangi harga jual.
+
+### 4. Memprioritaskan Produk dengan Performa Tinggi
+
+Meningkatkan eksposur pemasaran dan ketersediaan stok untuk produk dan kategori dengan performa penjualan yang kuat.
+
+Produk dengan performa tinggi juga dapat digunakan dalam strategi **cross-selling** dan promosi.
+
+### 5. Memperkuat Segmentasi Pelanggan
+
+Menggabungkan variabel demografis dan perilaku untuk membuat segmen pelanggan yang lebih tepat sasaran.
+
+Hal ini dapat meningkatkan personalisasi pemasaran dan membantu perusahaan memberikan penawaran yang lebih relevan kepada setiap segmen pelanggan.
+
+---
+
+# 📁 Struktur Proyek
 
 ```text
 Customer-Shopping-Behavior-Analysis/
@@ -281,18 +314,20 @@ Customer-Shopping-Behavior-Analysis/
 
 ---
 
-# 📌 Key Skills Demonstrated
+# 📌 Skill Utama yang Ditunjukkan
 
-This project demonstrates the following Data Analyst skills:
+Proyek ini menunjukkan kemampuan Data Analyst berikut:
 
 * Data Cleaning
 * Data Preprocessing
 * Exploratory Data Analysis
 * SQL Querying
+* Data Aggregation
 * Data Transformation
 * Data Visualization
 * Power BI Dashboard Development
 * KPI Development
+* Customer Segmentation
 * Business Analysis
 * Business Insight Generation
 * Data-Driven Decision Making
@@ -303,11 +338,12 @@ This project demonstrates the following Data Analyst skills:
 
 **Faris Fatur Rohman**
 
-Bachelor of Mathematics | Data Analyst
+**Sarjana Matematika | Data Analyst**
 
-**Skills:**
+### Skills
+
 Python · SQL · Excel · Power BI · Pandas · NumPy · Data Analysis · Data Cleaning · Data Visualization
 
 ### GitHub
 
-[github.com/SubaerVernandes](https://github.com/SubaerVernandes)
+github.com/SubaerVernandes
