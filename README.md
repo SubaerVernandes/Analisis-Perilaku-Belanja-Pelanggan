@@ -202,7 +202,7 @@ Dashboard mencakup metrik utama dan visualisasi yang berkaitan dengan:
 
 ## Dashboard Preview
 
-[Customer Shopping Behavior Dashboard](https://chatgpt.com/c/dashboard.png)
+![Customer Shopping Behavior Dashboard](Pasbor%20Perilaku%20Pelanggan.png)
 
 ---
 
