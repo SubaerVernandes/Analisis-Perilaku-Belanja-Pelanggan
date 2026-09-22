@@ -342,7 +342,7 @@ Proyek ini menunjukkan kemampuan Data Analyst berikut:
 
 ### Skills
 
-Python · SQL · Excel · Power BI · Pandas · NumPy · Data Analysis · Data Cleaning · Data Visualization
+Python · SQL · Excel · Power BI · Pandas · NumPy · Matplotlib · Data Analysis · Data Cleaning · Data Visualization
 
 ### GitHub
 
